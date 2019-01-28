@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LoginAppln</title>
+   
+</head>
+<body>
+    @if(@ViewBag.employeename==null)
+    {
+       
+    @Html.Action("Logout", "Login")
+    }
+    else
+    {
+        <h6>@Html.ActionLink("Log Out", "Logout", "Login")  </h6>
+    }
+    Welcome @ViewBag.employeename
+   
+    <div> 
+    </div>
+</body>
+</html>
